@@ -19,7 +19,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = String(prompt("State your choice-Rock ,Paper or Scissor")).toLowerCase();
-    return humanChoice;
+    return humanChoice
 }
 
 function playRound(compChoice, humanChoice) {
@@ -49,11 +49,21 @@ function playRound(compChoice, humanChoice) {
 function playGame() {
     let count = 1;
     while (count < 6) {
+        // To play 5 Rounds
         let humanChoice = getHumanChoice()
         let compChoice = getComputerChoice()
-        playRound(compChoice, humanChoice)
-        count++;
+
+        if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissor") {
+            playRound(compChoice, humanChoice)
+            count++;
+        } else {
+            alert("enter correctly")
+            break;
+        }
+
+
     }
+    // Declare final winner
     if (humanScore > computerScore) {
         console.log('You Won')
         alert(`You won by ${humanScore-computerScore} points`);
