@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     background-color: #000;
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
 }
 
 html {

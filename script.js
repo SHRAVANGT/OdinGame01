@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let computerScore = 0;
     let humanScore = 0;
     let gameCount = 0;
-    let playerselectionButton = document.querySelectorAll(".buttons")
+    let playerselectionButton = document.querySelectorAll(".buttons button")
     let display = document.querySelector('.display');
     let displayResult = document.createElement('h2');
     displayResult.classList.add('display-text');
@@ -60,15 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
             let compChoice = getComputerChoice();
             playRound(compChoice, humanChoice);
             gamecount.textContent = (`Game:${gameCount}`)
-            resetButton.textContent = 'reset'
-            resetButton.addEventListener('click', () => {
-                humanScore = 0;
-                computerScore = 0;
-                display.innerHTML = ''
-                gameCount = 0;
-                gamecount.innerHTML = `Game:${gameCount}`
-            })
             display.appendChild(resetButton)
         })
+    })
+    resetButton.textContent = 'reset'
+    resetButton.addEventListener('click', () => {
+        humanScore = 0;
+        computerScore = 0;
+        display.innerHTML = ''
+        gameCount = 0;
+        gamecount.innerHTML = `Game:${gameCount}`
     })
 })
