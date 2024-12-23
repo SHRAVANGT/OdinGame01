@@ -11,9 +11,9 @@ displayScorecard.classList.add('score-text')
 let container = document.querySelector('.container');
 let resetButton = document.createElement('button')
 resetButton.classList.add('resetButt')
-let gamecount = document.querySelector('h2')
-gamecount.classList.add('GameCount')
-gamecount.style.color = 'white'
+let gamecount = document.querySelector('.game-count')
+gamecount.textContent = 'Game:0'
+
 
 function getComputerChoice() {
     let number = Math.round(Math.random() * 10);

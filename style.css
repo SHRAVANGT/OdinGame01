@@ -32,7 +32,7 @@ h1 {
 }
 
 .display-text {
-    color: white;
+    color: rgb(232, 179, 80);
     /* text-align: center; */
     /* width: auto; */
 }
@@ -47,7 +47,7 @@ h1 {
     border-radius: 0.9rem;
 }
 
-.GameCount {
+.game-count {
     color: rgb(232, 179, 80);
 }
 
